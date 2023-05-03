@@ -75,7 +75,7 @@ QMainWindow {
         background-color: $COLOR_BACKGROUND_4;
         border: 0px solid $COLOR_BACKGROUND_1;
         spacing: 0px;
-        padding: 2px;
+        padding: 0px;
 
         &:hover {
             background-color: $COLOR_BACKGROUND_6;
@@ -172,8 +172,8 @@ QCheckBox {
 
     &::indicator {
         margin-left: 2px;
-        height: 14px;
-        width: 14px;
+        height: 18px;
+        width: 18px;
 
         &:unchecked {
             image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_unchecked.png');
@@ -323,8 +323,8 @@ QRadioButton {
         border: none;
         outline: none;
         margin-left: 2px;
-        height: 14px;
-        width: 14px;
+        height: 18px;
+        width: 18px;
 
         &:unchecked {
             image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_unchecked.png');
@@ -370,8 +370,9 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmenubar
 --------------------------------------------------------------------------- */
 QMenuBar {
     background-color: $COLOR_BACKGROUND_4;
-    padding: 2px;
-    border: $BORDER_1;
+    padding: 0px;
+    border: 0px;
+    spacing: 0px;
     color: $COLOR_TEXT_1;
     selection-background-color: $COLOR_ACCENT_3;
     &:focus {
@@ -380,7 +381,7 @@ QMenuBar {
 
     &::item {
         background: transparent;
-        padding: 4px;
+        padding: 8px 15px 8px 15px;
 
         &:selected {
             padding: 4px;
@@ -811,10 +812,10 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbar
 --------------------------------------------------------------------------- */
 QToolBar {
     background-color: $COLOR_BACKGROUND_4;
-    border-bottom: $BORDER_1;
-    padding: 1px;
+    border-bottom: 0px;
+    padding: 3px;
     font-weight: bold;
-    spacing: 2px;
+    spacing: 15px;
 
     &:disabled{
         /* Fixes #272 */
@@ -1978,6 +1979,7 @@ QListView,
 QTableView,
 QColumnView {
     background-color: $COLOR_BACKGROUND_1;
+    alternate-background-color: $COLOR_BACKGROUND_4;
     border: $BORDER_2;
     color: $COLOR_TEXT_1;
     gridline-color: $COLOR_BACKGROUND_4;
@@ -2168,7 +2170,7 @@ QToolBox {
         }
     }
 
-    QScrollArea QWidget QWidget {
+    QScrollArea {
         padding: 0px;
         border: 0px;
         background-color: $COLOR_BACKGROUND_1;
@@ -2187,12 +2189,12 @@ https://stackoverflow.com/questions/14581498/qt-stylesheet-for-hline-vline-color
 /* (dot) .QFrame  fix #141, #126, #123 */
 
 .QFrame {
-    border-radius: $SIZE_BORDER_RADIUS;
+    border-radius: 0px;
     border: $BORDER_2;
 
     /* No frame */
     &[frameShape="0"] {
-        border-radius: $SIZE_BORDER_RADIUS;
+        border-radius: 0px;
         border: 1px transparent $COLOR_BACKGROUND_4;
     }
 
@@ -2320,4 +2322,18 @@ QAbstractView {
 PlotWidget {
     /* Fix cut labels in plots #134 */
     padding: 0px;
+}
+
+/* QMdiArea -------------------------------------------------------------
+--------------------------------------------------------------------------- */
+QMdiArea {
+  border: 0px;
+}
+QMdiSubWindow {
+  border: 2px solid $COLOR_BACKGROUND_4;
+  border-radius: 0px;
+  border-top: 3px solid #346792;
+}
+QMdiSubWindow:title {
+  height: 25px ;
 }
