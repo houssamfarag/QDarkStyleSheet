@@ -2336,7 +2336,9 @@ QMdiSubWindow {
   border-top: 3px solid #346792;
   selection-background-color: #346792;
   background: $COLOR_BACKGROUND_4;
+  selection-color: #F5F5F5;
 }
+
 QMdiSubWindow:title {
   height: 25px ;
 }
