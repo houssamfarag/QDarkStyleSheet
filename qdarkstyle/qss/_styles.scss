@@ -1299,6 +1299,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcombobox
 
 --------------------------------------------------------------------------- */
 QComboBox {
+    combobox-popup: 0;
     border: $BORDER_2;
     border-radius: $SIZE_BORDER_RADIUS;
     selection-background-color: $COLOR_ACCENT_2;
@@ -1984,6 +1985,7 @@ QColumnView {
     color: $COLOR_TEXT_1;
     gridline-color: $COLOR_BACKGROUND_4;
     border-radius: $SIZE_BORDER_RADIUS;
+    selection-background-color: transparent;
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
@@ -2331,13 +2333,12 @@ QMdiArea {
   border: 0px;
 }
 QMdiSubWindow {
-  border: 2px solid $COLOR_BACKGROUND_4;
+  border: 3px solid $COLOR_BACKGROUND_4;
   border-radius: 0px;
   border-top: 3px solid #346792;
   selection-background-color: #346792;
   selection-color: #F5F5F5;
 }
-
 QMdiSubWindow:title {
-  height: 25px ;
+  height: 28px;
 }
